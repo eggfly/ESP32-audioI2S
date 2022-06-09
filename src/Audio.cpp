@@ -718,7 +718,7 @@ bool Audio::connecttoFS(fs::FS &fs, const char* path, uint32_t resumeFilePos) {
         return true;
     } // end WAVE section
 
-    if(endsWith(afn, ".flac")) {     // FLAC section
+    if(endsWith(afn, ".flac")||endsWith(afn, ".fla")) {     // FLAC section
         free(afn);
         m_codec = CODEC_FLAC;
         if(!psramFound()){
